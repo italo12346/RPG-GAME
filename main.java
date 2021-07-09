@@ -41,8 +41,13 @@ public class main {
                     estoqueCamisa = estoqueCamisa + num;
              
                     System.out.println("O total de camisas agora e: " + estoqueCamisa);
-                    break;
-                } else {
+                    
+                    System.out.println(user+"... Deseja consultar mais alguma categoria ? " );
+                    add = texto.nextLine();                   
+               }
+                if("sim".equals(add)){
+                    System.out.println("__________\n");
+                }else {
                     System.out.println("Tchau");
                     break;
                 }
@@ -56,9 +61,14 @@ public class main {
                     num = ler.nextInt();
                     estoqueCaneca = estoqueCaneca + num;
                     System.out.println("O total de canecas agora e: " + estoqueCaneca);
-                    break;
+                    
+                    System.out.println(user+"... Deseja consultar mais alguma categoria ? " );
+                    add = texto.nextLine();                   
 
-                } else {
+                }
+                 if("sim".equals(add)){
+                    System.out.println("__________\n");
+                }else {
                     System.out.println("Tchau");
                     break;
                 }
@@ -72,7 +82,12 @@ public class main {
                     num = ler.nextInt();
                     estoqueRoupas = estoqueRoupas + num;
                     System.out.println("O total de roupas agora e: " + estoqueRoupas);
-                    break;
+                    
+                    System.out.println(user+"... Deseja consultar mais alguma categoria ? " );
+                    add = texto.nextLine();                   
+                }
+                 if("sim".equals(add)){
+                    System.out.println("__________\n");
                 }else {
                     System.out.println("Tchau");
                     break;
@@ -88,6 +103,12 @@ public class main {
                     num = ler.nextInt();
                     estoqueQuadros = estoqueQuadros + num;
                     System.out.println("O total de Quadros agora e: " + estoqueQuadros);
+                    
+                    System.out.println(user+"... Deseja consultar mais alguma categoria ? " );
+                    add = texto.nextLine();                   
+                }
+                 if("sim".equals(add)){
+                    System.out.println("__________\n");
                 }else {
                     System.out.println("Tchau");
                     break;
