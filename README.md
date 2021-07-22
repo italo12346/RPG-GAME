@@ -11,4 +11,4 @@ clique no link acima para executar direto no repl.it
 * camisas
 * canecas
 
-:point_right: Nessa parte onde a programação java e OO pode ser emplementada, o sistema pode fazer o cadastro e controle de esoque, assim como catalogar os objetos por tipo, assim como tambem ter a opção de adicionar descrição e imagens de cada produto.
+:point_right: Nessa parte onde a programação java e OO pode ser emplementada, o sistema pode fazer o cadastro e controle de esoque, assim como catalogar os objetos por tipo.
