@@ -6,12 +6,13 @@ import java.util.Scanner;
 
 
 /**
- *
- * @author FlameRazer
+ * @author Italo Souza Sampaio
  */
+
 public class RpgGame {
+
        public Scanner ler = new Scanner(System.in);
-       Jogador p1 = new Jogador();
+       Jogador p1 = new Jogador(150);
        
        
        
@@ -22,13 +23,15 @@ public class RpgGame {
        
        
        public int batalha(String player){  // Onde as batalhas vão ocorrer
-           p1.hpPlayer = 150;
+           
+
            int hpPc;
                              // O jogador só pode usar o especial 5x por batalha
            int contagemEspecialPC = 5;
            int escolhaAtaque;
            int i=1; //adversarios
           while(p1.hpPlayer > 0){
+              OUTER:
                hpPc = 14+i;
                System.out.println("\n=-=-=-=-=-=-=-=-=");
                System.out.println("INIMIGO "+i);
@@ -42,7 +45,7 @@ public class RpgGame {
                     switch(escolhaAtaque){
                             case 1:
                                 int soco=7+p1.melhorAttack;
-                                System.out.println(player+" aplicou um SOCO...// Inimigo perde 7 hp");
+                                System.out.println(player+" aplicou um SOCO...// Inimigo perde "+soco+" hp");
                                 hpPc -= soco;
                                 break;       
                             case 2: 
@@ -99,17 +102,20 @@ public class RpgGame {
                   } 
                }
                
-               if(i==10){
-                   p1.melhorarAtaque();
+               
+           i++;
+           if(i==10){
+               
+                   p1.melhorAttack= p1.melhorAttack+2;
                    System.out.println("_____________________________");
-                   System.out.println("ataque soco ganha 1 de dano ");
+                   System.out.println("ataque soco ganha 2 de dano ");
                    System.out.println("_____________________________");
                }
-           i++;
-           
+          
       } 
           
-           return i;
+           return i-1;
+           
  }
        
        
@@ -122,13 +128,15 @@ public class RpgGame {
            p1.nome = ler.nextLine();
            while(continua==1){
                //Realiza o game
+               p1.resetarContagemEso();
                record = batalha(p1.nome);
                System.out.println("___GAME OVER___Deseja continuar? (1)sim (2) Não");
                System.out.println("RECORD SCORE "+ record);
-               continua = ler.nextInt()-1;
+               continua = ler.nextInt();
            }   
-                         
+            
     }
+       
     public static void main(String[] args) {
         RpgGame game = new RpgGame();
         game.Game();

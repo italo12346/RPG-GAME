@@ -6,15 +6,18 @@ import java.util.Scanner;
 
 /**
  *
- * @author FlameRazer
+ * @author Italo Souza Sampaio
  */
 public class Jogador {
     public String nome;
     public int hpPlayer;
     private int contagemEspecial=5; // O jogador só pode usar o especial 5x por batalha
     public boolean verificarEsp=true;
-    public int melhorAttack=0;
+    public int melhorAttack;
     
+    public Jogador(int hpPlayer){
+    this.hpPlayer= hpPlayer;
+}
     public Scanner ler = new Scanner(System.in);
     
      public int ataqueUsuairio(){
@@ -51,13 +54,10 @@ public class Jogador {
              
          }
      }
-     public void melhorarAtaque(){
-        melhorAttack++;
-        
+     public void resetarContagemEso(){
+         this.contagemEspecial=5;
      }
-     
-     
-     
+
 
 }
 
