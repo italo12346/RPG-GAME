@@ -12,7 +12,8 @@ import java.util.Scanner;
 public class RpgGame {
 
        public Scanner ler = new Scanner(System.in);
-       Jogador p1 = new Jogador(150);
+       Jogador p1 = new Jogador();
+       
        
        
        
@@ -24,8 +25,9 @@ public class RpgGame {
        
        public int batalha(String player){  // Onde as batalhas vão ocorrer
            
-
+           p1.hpPlayer=150;
            int hpPc;
+                   
                              // O jogador só pode usar o especial 5x por batalha
            int contagemEspecialPC = 5;
            int escolhaAtaque;
@@ -133,6 +135,8 @@ public class RpgGame {
                System.out.println("___GAME OVER___Deseja continuar? (1)sim (2) Não");
                System.out.println("RECORD SCORE "+ record);
                continua = ler.nextInt();
+         
+                  
            }   
             
     }

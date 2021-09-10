@@ -3,7 +3,7 @@ package rpggame;
 
 import java.util.Scanner;
 
-
+//Criar classes abstratas com tipos de inimigos 
 /**
  *
  * @author Italo Souza Sampaio
@@ -15,10 +15,9 @@ public class Jogador {
     public boolean verificarEsp=true;
     public int melhorAttack;
     
-    public Jogador(int hpPlayer){
-    this.hpPlayer= hpPlayer;
-}
+    
     public Scanner ler = new Scanner(System.in);
+   
     
      public int ataqueUsuairio(){
            System.out.println("Escolha seu ataque: ");
